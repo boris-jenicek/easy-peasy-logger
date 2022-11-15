@@ -1,0 +1,83 @@
+<h4>Please open the console (F12)</h4>
+
+<div class="form-wrapper" [formGroup]="formGroup">
+  <!-- region *** Section 1 *** -->
+  <div>
+    <h5>Select style</h5>
+    <ng-container [ngTemplateOutlet]="checkbox" [ngTemplateOutletContext]="{ name: 'bold', form: formGroup }"></ng-container>
+    <ng-container [ngTemplateOutlet]="checkbox" [ngTemplateOutletContext]="{ name: 'italic', form: formGroup }"></ng-container>
+    <ng-container [ngTemplateOutlet]="checkbox" [ngTemplateOutletContext]="{ name: 'strikethrough', form: formGroup }"></ng-container>
+    <ng-container [ngTemplateOutlet]="checkbox" [ngTemplateOutletContext]="{ name: 'underline', form: formGroup }"></ng-container>
+    <ng-container [ngTemplateOutlet]="number" [ngTemplateOutletContext]="{ name: 'size', label: 'Font size', form: formGroup }">
+    </ng-container>
+  </div>
+  <!-- endregion -->
+
+  <!-- region *** Section 2 *** -->
+  <div>
+    <h5>Log some data</h5>
+    <div class="form-group radio-input">
+      <input id="dummyValueNone" formControlName="dummyValue" type="radio" [value]="dummyValueEnum.NONE" name="dummyValue" />
+      <label for="dummyValueNone">None</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="dummyValueList" formControlName="dummyValue" type="radio" [value]="dummyValueEnum.LIST" name="dummyValue" />
+      <label for="dummyValueList">Dummy list</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="dummyValueObject" formControlName="dummyValue" type="radio" [value]="dummyValueEnum.OBJECT" name="dummyValue" />
+      <label for="dummyValueObject">Dummy object</label>
+    </div>
+  </div>
+  <!-- endregion -->
+
+  <!-- region *** Section 3 *** -->
+  <div>
+    <h5>Change color</h5>
+    <div class="form-group radio-input">
+      <input id="red" formControlName="changeColor" type="radio" [value]="definedColorEnum.RED" name="changeColor" />
+      <label for="red">Red</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="blue" formControlName="changeColor" type="radio" [value]="definedColorEnum.BLUE" name="changeColor" />
+      <label for="blue">Blue</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="yellow" formControlName="changeColor" type="radio" [value]="definedColorEnum.YELLOW" name="changeColor" />
+      <label for="yellow">Yellow</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="green" formControlName="changeColor" type="radio" [value]="definedColorEnum.GREEN" name="changeColor" />
+      <label for="green">Green</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="purple" formControlName="changeColor" type="radio" [value]="definedColorEnum.PURPLE" name="changeColor" />
+      <label for="purple">Purple</label>
+    </div>
+    <div class="form-group radio-input">
+      <input id="customColor" formControlName="changeColor" type="radio" [value]="definedColorEnum.CUSTOM" name="changeColor" />
+      <label for="customColor"
+        >Custom <input class="color-picker-radio" [(colorPicker)]="customColor" [style.background]="customColor"
+      /></label>
+    </div>
+  </div>
+  <!-- endregion -->
+</div>
+<button (click)="generate()">Click and see the result in the console</button>
+<pre><code class="javascript" #codeBlock [innerHTML]="code"></code></pre>
+
+<!-- region *** Templates *** -->
+<ng-template #checkbox let-name="name" let-label="label" let-form="form">
+  <div class="form-group checkbox" [formGroup]="form">
+    <input type="checkbox" [formControlName]="name" [id]="name" />
+    <label [for]="name">{{ label ? label : (name | titlecase) }}</label>
+  </div>
+</ng-template>
+
+<ng-template #number let-name="name" let-label="label" let-form="form">
+  <div class="form-group number-input" [formGroup]="form">
+    <input type="number" [formControlName]="name" [id]="name" />
+    <label [for]="name">{{ label }}</label>
+  </div>
+</ng-template>
+<!-- endregion -->

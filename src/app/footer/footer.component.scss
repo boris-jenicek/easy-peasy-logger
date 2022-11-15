@@ -1,0 +1,30 @@
+footer {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 20px;
+  margin: 8px;
+
+  span {
+    color: #495057;
+    font-weight: bold;
+    margin: 0 6px;
+  }
+}
+
+.gh-star {
+  align-content: center;
+  align-items: center;
+  background-color: #da5555;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px;
+  padding: 4px 20px 4px 20px;
+  text-decoration: none;
+  width: auto;
+}

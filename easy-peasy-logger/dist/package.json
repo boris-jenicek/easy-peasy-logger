@@ -1,0 +1,54 @@
+{
+  "name": "@costlydeveloper/easy-peasy-logger",
+  "version": "0.0.0",
+  "description": "The world's easy-peasy, the most fun javascript logger.",
+  "author": "Boris Jenicek <costlydeveloper@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:costlydeveloper/easy-peasy-logger.git",
+    "directory": "dist"
+  },
+  "homepage": "https://costlydeveloper.github.io/easy-peasy-logger/",
+  "bugs": {
+    "url": "https://github.com/costlydeveloper/easy-peasy-logger/issues"
+  },
+  "keywords": [
+    "front-end",
+    "console",
+    "logger",
+    "debug",
+    "debugger",
+    "js debugger",
+    "angular debugger",
+    "react debugger",
+    "fancy logger",
+    "angular logger",
+    "react logger",
+    "js logger",
+    "ts logger"
+  ],
+  "module": "fesm2015/costlydeveloper-easy-peasy-logger.mjs",
+  "es2020": "fesm2020/costlydeveloper-easy-peasy-logger.mjs",
+  "esm2020": "esm2020/costlydeveloper-easy-peasy-logger.mjs",
+  "fesm2020": "fesm2020/costlydeveloper-easy-peasy-logger.mjs",
+  "fesm2015": "fesm2015/costlydeveloper-easy-peasy-logger.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/costlydeveloper-easy-peasy-logger.mjs",
+      "es2020": "./fesm2020/costlydeveloper-easy-peasy-logger.mjs",
+      "es2015": "./fesm2015/costlydeveloper-easy-peasy-logger.mjs",
+      "node": "./fesm2015/costlydeveloper-easy-peasy-logger.mjs",
+      "default": "./fesm2020/costlydeveloper-easy-peasy-logger.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

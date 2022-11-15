@@ -1,0 +1,31 @@
+{
+  "name": "@costlydeveloper/easy-peasy-logger",
+  "version": "0.0.0",
+  "description": "The world's easy-peasy, the most fun javascript logger.",
+  "author": "Boris Jenicek <costlydeveloper@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:costlydeveloper/easy-peasy-logger.git",
+    "directory": "dist"
+  },
+  "homepage": "https://costlydeveloper.github.io/easy-peasy-logger/",
+  "bugs": {
+    "url": "https://github.com/costlydeveloper/easy-peasy-logger/issues"
+  },
+  "keywords": [
+    "front-end",
+    "console",
+    "logger",
+    "debug",
+    "debugger",
+    "js debugger",
+    "angular debugger",
+    "react debugger",
+    "fancy logger",
+    "angular logger",
+    "react logger",
+    "js logger",
+    "ts logger"
+  ]
+}

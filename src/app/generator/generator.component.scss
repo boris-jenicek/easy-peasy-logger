@@ -1,0 +1,178 @@
+$main-color: #2a9187;
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 140px 0 20px;
+
+  .form-group {
+    align-items: center;
+    display: flex;
+    margin-bottom: 15px;
+    user-select: none;
+
+    &.radio-input {
+      .color-picker-radio {
+        border: none;
+        border-radius: 2px;
+        color: transparent;
+        cursor: pointer;
+        margin: 0 10px;
+        outline: none;
+        width: 60px;
+      }
+
+      input:not(.color-picker-radio) {
+        &:checked,
+        &:not(:checked) {
+          left: -9999px;
+          position: absolute;
+        }
+
+        &:checked + label,
+        &:not(:checked) + label {
+          color: #666666;
+          cursor: pointer;
+          display: inline-block;
+          line-height: 20px;
+          padding-left: 28px;
+          position: relative;
+        }
+
+        &:checked + label:before,
+        &:not(:checked) + label:before {
+          background: #ffffff;
+          border: 1px solid #dddddd;
+          border-radius: 100%;
+          content: '';
+          height: 18px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 18px;
+        }
+
+        &:checked + label:after,
+        &:not(:checked) + label:after {
+          background: $main-color;
+          border-radius: 100%;
+          content: '';
+          height: 12px;
+          left: 3px;
+          position: absolute;
+          top: 3px;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+          width: 12px;
+        }
+
+        &:not(:checked) + label:after {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &:checked + label:after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    &.number-input {
+      input {
+        border: 1px solid $main-color;
+        border-radius: 2px;
+        color: $main-color;
+        margin-right: 4px;
+        padding: 6px;
+        width: 60px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &.checkbox {
+      input {
+        cursor: pointer;
+        display: none;
+        height: initial;
+        margin-bottom: 0;
+        padding: 0;
+        width: initial;
+
+        &:checked + label:after {
+          border: solid #2a9187;
+          border-width: 0 2px 2px 0;
+          content: '';
+          display: block;
+          height: 14px;
+          left: 8px;
+          position: absolute;
+          top: 5px;
+          transform: rotate(45deg);
+          width: 6px;
+        }
+      }
+
+      label {
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: 1px solid $main-color;
+          border-radius: 2px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+          content: '';
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 5px;
+          padding: 10px;
+          position: relative;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+button {
+  background-color: $main-color;
+  background-image: linear-gradient(#37adb2, #329ca0);
+  border: 1px solid #2a8387;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-family: -apple-system, '.SFNSDisplay-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 11px 15px 12px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: box-shadow 0.05s ease-in-out, opacity 0.05s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: 0.15s, 0.15s;
+  }
+
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+}
+
+h4 {
+  position: relative;
+  top: -20px;
+}
