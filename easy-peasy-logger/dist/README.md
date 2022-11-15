@@ -1,11 +1,3 @@
-<style>
-g{ color: #31A821 }
-r { color: #DA5555 }
-bl { color: #5560DA }
-pu { color: #A955DA }
-y { color: #EFEC47 }
-</style>
-
 <h1 align="center">EasyPeasyLogger</h1>
 
 <p align="center">
@@ -48,7 +40,7 @@ e.g. 1:
 Log.red('My note...', 'U', 20)('Log anything here..');
 ```
 
-![red.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/docs/assets/red.png)
+![red.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/main/docs/assets/red.png)
 
 ---
 
@@ -58,7 +50,7 @@ e.g. 2:
 Log.blue('My note...', 20)('Log anything here..');
 ```
 
-![blue.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/docs/assets/blue.png)
+![blue.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/main/docs/assets/blue.png)
 
 ---
 
@@ -68,7 +60,7 @@ e.g. 3 (custom color):
 Log.customColor('#B19F88', 'My note...', 'U', 20)('Log anything here..');
 ```
 
-![customcolor.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/docs/assets/custom-color.png)
+![customcolor.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/main/docs/assets/custom-color.png)
 
 ---
 
@@ -84,25 +76,25 @@ e.g. 4:
     Log.yellow('EXAMPLE')(user);
 ```
 
-![eg4.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/docs/assets/eg4.png)
+![eg4.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/main/docs/assets/eg4.png)
 
 ---
 
 ### Perdefined color tyes
 
-| color type | color            |
-| ---------- | ---------------- |
-| green      | <g>#31A821</g>   |
-| red        | <r>#DA5555</r>   |
-| blue       | <bl>#5560DA</bl> |
-| purple     | <pu>#A955DA</pu> |
-| yellow     | <y>#EFEC47</y>   |
+| color type | color   |
+| ---------- | ------- |
+| green      | #31A821 |
+| red        | #DA5555 |
+| blue       | #5560DA |
+| purple     | #A955DA |
+| yellow     | #EFEC47 |
 
 ---
 
 ## Additional options
 
-![epl.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/docs/assets/epl.png)
+![epl.png](https://raw.githubusercontent.com/costlydeveloper/easy-peasy-logger/main/docs/assets/epl.png)
 
 ### Styling the title
 
