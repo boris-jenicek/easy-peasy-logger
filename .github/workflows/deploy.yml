@@ -27,7 +27,7 @@ jobs:
         with:
           diff-search: true
           file-name: easy-peasy-logger/dist/package.json
-          token: ${{ secrets.GT.TOKEN }}
+          token: ${{ secrets.GT_TOKEN }}
 
       - name: Publish EPL to GitHub Package Registry
         if: steps.epl.outputs.changed == 'true'
