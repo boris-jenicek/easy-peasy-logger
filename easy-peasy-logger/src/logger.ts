@@ -1,4 +1,4 @@
-import { LogRules } from 'easy-peasy-logger/src/rules';
+import { LogRules } from './rules';
 
 type TitleOptions = 'B' | 'bold' | 'I' | 'italic' | 'S' | 'strikethrough' | 'U' | 'underline' | number;
 
